@@ -8,3 +8,4 @@ if Usuiario_2 in Objetos_a_confiscar:
     print("No puede ingresar con ese objeto")
 else:    print("Bienvenido usuario 2, puede ingresar")
 
+print("chupapija")
