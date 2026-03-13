@@ -30,3 +30,8 @@ while True: #la mayoria de estos añadidos son por capricho y personalización, 
         break
     else:
         print("Por escriba una opción válida")
+    #Hago una aclaración y es que en el diagrama de flujo puse las opciones 1, 2, 3, 4, pero mientras constuia el código
+    #me di cuenta que podría ser mejor para el usuario usar 8 o w, 2 o s, 4 o a y 6 o d, ya que si nos fijamos en el teclado
+    #numérico de nuestros teclados podremos ver esos mismos números señalados con flechas las cuales podemos tomar de referencia
+    #para la dirección a donde se mueve el borracho, lo mismo para las teclas w, a, s y d, estas siendo la dirección típica en
+    #los videojuegos.
