@@ -23,3 +23,4 @@ if rangeA < rangeB:
 else:
     print("El valor del inicio debe ser menor que el valor del final")
     
+    
