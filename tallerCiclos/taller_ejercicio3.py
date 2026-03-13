@@ -1,6 +1,6 @@
 #No se si interpreté el inciso "a" mal, pues por un lado pensé que se refería a 2 elevado a sus potencias desde 20 hasta 220,
 #Tipo 2^20 2^21 2^22 ... 2^219 2^220, pero despúes leí y supuse que más bien podría ser el que dejé sin numerales en el código,
-#Igualmente el primero que hice lo dejé de todas maneras pero sin formar parte del código a ejecutar, por si acaso (aunque no creo) ese sea el correcto.
+#Igualmente el primero que hice lo dejé de todas maneras pero sin formar parte del código a ejecutar, por si acaso (aunque no creo) de que ese sea el correcto.
 
 # potencia = 20
 # resultado = 0
@@ -40,5 +40,5 @@ for xxy in tex:
         sums = sums + number
 print(f"\nLa suma de los números impares del número {count} es: {sums}")
 
-#Para aclarar si, hice practicamente un copy-paste de los incisos "3" y "4" del ejercicio 2 para hacer el inciso "2" y "3" de este ejercicio
-#Es que praticamente son los mismos
+#Para aclarar, si, hice practicamente un copy-paste de los incisos "3" y "4" del ejercicio 2 para hacer el inciso "2" y "3" de este ejercicio
+#Es que praticamente son los mismos así que no tuve necesidad de hacerlos desde ceroS
