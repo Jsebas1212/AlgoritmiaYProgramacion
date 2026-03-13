@@ -8,24 +8,31 @@ paso = 0
 while True: #la mayoria de estos añadidos son por capricho y personalización, sorry
     starexit = input("Escribe 'e' para empezar o 's' para salir ")
     if starexit == "e":
-        for posición in range (10):
-            print(f"\n--- Paso {paso + 1} de 10 ---")
+        for posición in range (100):
+            print(f"\n--- Paso {posición + 1} de 100 ---")
             posición = input("Hacia donde se ha movido? ")
             if posición == "6" or posición == "d":
                 print("Se ha movido una cuadra hacia la derecha")
                 x = x + 1
+                paso + 1
             elif posición == "2" or posición == "s":
                 print("Se ha movido una cuadra hacia ababjo")
                 y = y - 1
+                paso + 1
             elif posición == "4" or posición == "a":
                 print("Se ha movido una cuadra hacia la izquierda")
                 x = x - 1
+                paso + 1
             elif posición == "8" or posición == "w":
                 print("Se ha movido una cuadra hacia arriba")
                 y = y + 1
+                paso + 1
             else:
                 print("Opción inválida, el borracho no se ha movido en este paso")
-            print(f"\nDepues de 100 pasos el borracho se ha detenido en la posición ({x},{y})")
+                paso + 1
+        print(f"\nDespués de 100 pasos el borracho se ha detenido en la posición ({x},{y})")
     elif starexit == "s":
         print("---Cerrando simulador---")
         break
+    else:
+        print("Por escriba una opción válida")
