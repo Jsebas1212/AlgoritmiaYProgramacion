@@ -9,7 +9,7 @@
 #     potencia = potencia + 1 
 #     print(resultado) #Un poco caótico este print ¯\_(ツ)_/¯
 
-
+print("---Todas las potencias de 2 entre el rango de 20 a 220---")
 pot = 0
 x = 0
 while x < 220:
@@ -18,3 +18,24 @@ while x < 220:
         print(x, end=" ")
     pot = pot +1
 
+print("\n\n---Suma de números impares en entre un rango---")
+rangeA = int(input("Escriba el valor del inicio del rango: "))
+rangeB = int(input("Escriba el valor del final del rango: "))
+if rangeA < rangeB:
+    sumimp = 0
+    for numero in range(rangeA, rangeB +1):
+        if numero %2 !=0:
+            sumimp += numero
+    print(f"la suma de los números impares entre {rangeA} y {rangeB} es: {sumimp}")
+else:
+    print("El valor del inicio debe ser menor que el valor del final")
+
+print("\n---Suma de dígitos impares---")
+count = int(input("Digite un número: "))
+sums = 0
+tex = str(count)
+for xxy in tex:
+    number = int(xxy)
+    if number %2 != 0:
+        sums = sums + number
+print(f"\nLa suma de los números impares del número {count} es: {sums}")

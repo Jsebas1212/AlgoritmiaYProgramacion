@@ -27,11 +27,11 @@ else:
     print("El valor del inicio debe ser menor que el valor del final")
 
 print("\n---Suma de dígitos impares---")
-count = int(input("Digite un número: "))
+n = int(input("Digite un número: "))
 sums = 0
-tex = str(count)
+tex = str(n)
 for xxy in tex:
     number = int(xxy)
     if number %2 != 0:
         sums = sums + number
-print(f"\nLa suma de los números impares del número {count} es: {sums}")
+print(f"\nLa suma de los números impares del número {n} es: {sums}")
