@@ -19,4 +19,4 @@ while True:
                 b = 60
     elif t == "desactivar":
         print("\n---Alarma desactivada---\n")
-        break
+        break #La opción de apagado fué una idea de ultimo momento para el código
