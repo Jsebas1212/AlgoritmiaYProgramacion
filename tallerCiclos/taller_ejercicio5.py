@@ -13,4 +13,6 @@ while True:
             print("\nAbrir válvula de entrada")
     elif x == "apagar":
         print("\n---Apagando sistema---\n")
-        break
+        break 
+#A este solo tuve que copiar y pegar y añadirle el while y el break como extra tambien
+#Ah y los \n por mero capricho jeje
