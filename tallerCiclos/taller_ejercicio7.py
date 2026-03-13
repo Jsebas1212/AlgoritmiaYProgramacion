@@ -1,27 +1,31 @@
-S =input("¿Se ha lanzado el dado? ")
-if  S == "si" or S == "Si" or S == "SI" or S == "sI" :
-    N = int(input("¿Qué número ha salido? "))
-    if N == 1:
-        print("Posición en x = x + 1")
-        print("Actualizando posición de la ficha...")
-        print("Vuelve a lanzar el dado")
-        print("+1 lanzamiento")
-    elif N == 2:
-        print("Posición en y = y - 1")
-        print("Actualizando posición de la ficha...")
-        print("Vuelve a lanzar el dado")
-        print("+1 lanzamiento")
-    elif N == 3:
-        print("Posición en x = x - 1")
-        print("Actualizando posición de la ficha...")
-        print("Vuelve a lanzar el dado")
-        print("+1 lanzamiento")
-    elif N == 4:
-        print("Posición en y = y + 1")
-        print("Actualizando posición de la ficha...")
-        print("Vuelve a lanzar el dado")
-        print("+1 lanzamiento")
-    elif N < 1 or N > 4:
-        print("Número inválido, repetir lanzamiento")
-elif S == "no" or S == "No" or S == "NO" or S == "nO" :
-    print("Esperando lanzamiento del dado...")
+print("---¡¡¡Simluador de borracho!!!---") #El título me recuerda a un tamagotchi
+print("\nPara moverlo seguir el sentido de las flechas del teclado numérico del teclado")
+print("o tambien puede utilizar las techas w, a, s, d")
+print("\n8 = w = arriba   4 = a = izquierda   6 = d = derecha   2 = = s = abajo")
+x = 0
+y = 0
+paso = 0
+while True: #la mayoria de estos añadidos son por capricho y personalización, sorry
+    starexit = input("Escribe 'e' para empezar o 's' para salir ")
+    if starexit == "e":
+        for posición in range (10):
+            print(f"\n--- Paso {paso + 1} de 10 ---")
+            posición = input("Hacia donde se ha movido? ")
+            if posición == "6" or posición == "d":
+                print("Se ha movido una cuadra hacia la derecha")
+                x = x + 1
+            elif posición == "2" or posición == "s":
+                print("Se ha movido una cuadra hacia ababjo")
+                y = y - 1
+            elif posición == "4" or posición == "a":
+                print("Se ha movido una cuadra hacia la izquierda")
+                x = x - 1
+            elif posición == "8" or posición == "w":
+                print("Se ha movido una cuadra hacia arriba")
+                y = y + 1
+            else:
+                print("Opción inválida, el borracho no se ha movido en este paso")
+            print(f"\nDepues de 100 pasos el borracho se ha detenido en la posición ({x},{y})")
+    elif starexit == "s":
+        print("---Cerrando simulador---")
+        break
