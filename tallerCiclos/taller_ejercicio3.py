@@ -41,4 +41,4 @@ for xxy in tex:
 print(f"\nLa suma de los números impares del número {count} es: {sums}")
 
 #Para aclarar, si, hice practicamente un copy-paste de los incisos "3" y "4" del ejercicio 2 para hacer el inciso "2" y "3" de este ejercicio
-#Es que praticamente son los mismos así que no tuve necesidad de hacerlos desde ceroS
+#Es que praticamente son los mismos así que no tuve necesidad de hacerlos desde cero
