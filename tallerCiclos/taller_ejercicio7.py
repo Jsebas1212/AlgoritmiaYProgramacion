@@ -1,5 +1,5 @@
 print("---¡¡¡Simluador de borracho!!!---") #El título me recuerda a un tamagotchi
-print("\nPara moverlo seguir el sentido de las flechas del teclado numérico del teclado")
+print("\nPara moverlo seguir el sentido de las flechas del teclado numérico")
 print("o tambien puede utilizar las techas w, a, s, d")
 print("\n8 = w = arriba   4 = a = izquierda   6 = d = derecha   2 = = s = abajo")
 x = 0
