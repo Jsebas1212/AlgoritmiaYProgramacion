@@ -4,7 +4,7 @@ while True:
     if x == "si":
         y = input("\n¿Está la válvula cerrada? ")
         if y == "si":
-            print("\nMantener la válvula cerrada")
+            print("\nManteniendo la válvula cerrada")
         elif y == "no":
             print("\nCerrando válvula")
     elif x == "no":

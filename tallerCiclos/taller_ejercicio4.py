@@ -15,7 +15,7 @@ while True:
                 elif b == 60:
                     print("\nApagando despertador")
             elif Apag == "si" :
-                print("Apagando despertador")
+                print("\n--Apagando despertador--")
                 b = 60
     elif t == "desactivar":
         print("\n---Alarma desactivada---\n")
