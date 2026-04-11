@@ -21,7 +21,7 @@ if option.lower() == "":
             print("Saliendo del programa...")
             break
         elif lis_user.strip() == "Eléctrica":
-            print("\n¡Has encontrado el easter egg!")
+            print("\n¡Has encontrado un easter egg!")
             print("¡¡Viva la ingeniería electrica carajo!!")
         else:
             num_list = lis_user.split()
