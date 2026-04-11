@@ -5,4 +5,4 @@ from tkinter import messagebox
 tkinter.Tk().withdraw()
 
 # Esta es la línea mágica que crea la ventana emergente de información.
-messagebox.showinfo("Aviso de homosexualidad", "Hola, usted es 100% homosexual")
+messagebox.showinfo("Aviso de homosexualidad", "Hola, usted es 100% homosexual ¡Felicidades!")
