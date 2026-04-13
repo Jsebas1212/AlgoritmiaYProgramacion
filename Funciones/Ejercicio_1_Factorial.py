@@ -4,16 +4,27 @@ def factorial(n):
     """
     if n == 0:
         return 1
+    elif n < 0:
+        return "El factorial no está definido para números negativos."
     else:
         return n*factorial(n-1)
 
+
+print("ESPERA, MINIATURA MINIATURA")
+print("PERO QUE MINIATURA DICES TIO")
+
 while True:
-        numfact = input("Ingrese un número para calcular su factorial: ")
-        if numfact.lower() == "apagar":
-            print("Cerrando programa...")
+    calcfact = input("Ingrese un número entero para calcular su factorial: ")
+    if calcfact.isdigit() >= 0:
+        try:
+            calcfactint = int(calcfact)
+            print(factorial(calcfactint))
+        except ValueError:
+            print("Por favor, ingrese un número entero válido.")
+        try:
+            if calcfact.lower() == "salir" or calcfact.lower() == "s":
+                print("Saliendo del programa.")
             break
-        elif numfact.isdigit():
-            numfact_int = int(numfact)
-            print(factorial(numfact_int))
-        else:
-            print("Ingrese un número válido o 'apagar' para salir.")
+        except ValueError:
+            print("Por favor, ingrese un número entero válido.")
+

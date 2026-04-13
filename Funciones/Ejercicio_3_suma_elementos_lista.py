@@ -23,7 +23,7 @@ while True:
                     print("\nLa suma de los elementos de la lista ingresada es: ", suma_recursiva(List1))
                 except ValueError:
                     print("\nPinche bruto, ¿no ves que solo puedes ingresar números? Intenta de nuevo ingeniero industrial.")
-    elif option == "salir":
+    elif option.lower() == "salir" or option.lower()== "s":
         print("Saliendo del programa...")
         break
     else:
