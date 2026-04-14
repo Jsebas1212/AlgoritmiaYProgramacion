@@ -1,4 +1,4 @@
-def prom(lista):
+def promedio(lista):
     if lista == []:
         return 0
     else:
