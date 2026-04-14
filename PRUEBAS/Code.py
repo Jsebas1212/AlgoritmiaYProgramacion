@@ -1,15 +1,5 @@
-x = float(input("ingrese el tamaño de la verga: "))
-
-print(type(x))  # Esto mostrará que x es de tipo str (cadena de texto)
-#x = #float(x)  # Convertimos x a un número flotante (decimal)
-y = x + 1
-
-print(y)
-
-if y > 12:
-    print(" uff que grande papá")
-elif y < 12:
-    print("no es tan grande")
-elif y == 12:
-    print("JOAAAA LO JUSTO MI PAPÁ")
-
+opt = input("\nEscoja entre: Lista ya definida, lista personnalizada o salir? (D/P/S): ")
+if opt.lower() == "p" :
+        numtex = input("\nIngrese la lista de números separados por espacios: ")
+        List1 = numtex.split() #.split sirve para dividir un string (texto) en una lista separada por espacios, pero siendo aún texto.
+        print(List1)
