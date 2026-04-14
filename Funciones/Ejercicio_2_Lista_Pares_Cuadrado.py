@@ -38,7 +38,6 @@ def pro_lista(lista):
 print("---Hola bienvenido---")
 print("---Este programa te permite ingresar una lista de números enteros y te devolverá---")
 print("---una lista con los números pares elevados al cuadrado---") #Hasta ahora mi mensaje de bienvenida más normal
-
 while True:
     opt = input("\nEscoja entre: Lista ya definida, lista personnalizada o salir? (D/P/S): ")
     if opt.lower() == "d" :
