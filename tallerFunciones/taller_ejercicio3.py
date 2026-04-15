@@ -66,16 +66,12 @@ while True:
             agrlista = input("\n")
             datos = agrlista.split()
             nombre = datos[0]
-        
-        # 2. Súper importante: convertir el texto a números
-        cantidad = int(datos[1])
-        precio = float(datos[2])
-        
-        # 3. Ahora sí llamamos a la función con sus 4 variables separadas.
-        # OJO: Cambia 'mi_inventario' por el nombre real que le pusiste a tu diccionario al inicio.
-        agregar_producto(inventario, nombre, cantidad, precio)
+            cantidad = int(datos[1])
+            precio = float(datos[2])
+            agregar_producto(inventario, nombre, cantidad, precio)
 
-        # elif actionsinv.lower in ["eliminar","e"]:
+        #elif actionsinv.lower in ["eliminar","e"]:
+
 
         # elif actionsinv.lower in ["calcular","c"]:
 

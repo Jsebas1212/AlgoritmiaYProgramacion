@@ -1,4 +1,6 @@
-# def buscar_perfectos(limite):
+#Este código es para calcular números perfectos
+
+# def buscar_perfectos(limite): 
 #     print(f"Buscando números perfectos hasta el {limite}...")
 #     for num in range(2, limite + 1):
 #         suma_divisores = 0
@@ -12,6 +14,9 @@
 
 # # El programa correrá solo hasta el número que tú decidas
 # buscar_perfectos(10000)
+
+
+#Este es para comprobar si un número es perfecto
 
 def comprobar_numero_perfecto(n):
     divisores = []
@@ -41,3 +46,6 @@ def comprobar_numero_perfecto(n):
 # Prueba el código con el número que quieras
 numero_usuario = int(input("Introduce un número para comprobar: "))
 comprobar_numero_perfecto(numero_usuario)
+
+33550336
+#Calcular el 5to número perfecto tomarría de 4 a 10 horas dependiendo del procesador
