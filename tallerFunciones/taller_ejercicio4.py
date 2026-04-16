@@ -1,3 +1,48 @@
+def promedio(lista):
+    if lista == []:
+        return 0
+    else:
+        sumlista = sum(lista)
+        return float(sumlista) / len(lista)
+
+def promedio_por_estudiante(diccionario):
+    for nombre in diccionario:
+        notas = diccionario[nombre]
+        promnotas =promedio(notas)
+        print(f"El promedio del estudiante '{nombre}' es: {promnotas} / 5,0")
+
+def promedio_ponderado(diccionario):
+    for nombre in diccionario:
+        notas = diccionario[nombre]
+        nota1 = notas[0]*0.30
+        nota2 = notas[1]*0.30
+        nota3 = notas[2]*0.40
+        totalnota = nota1 + nota2 + nota3
+        print(f"El promedio ponderado del estudiante '{nombre}' es: {totalnota} / 5,0")
+
+
+notas = {
+    "Harry": [3.8, 4.0, 4.2],
+    "Ron": [3.2, 3.8, 2.8],
+    "Hemione": [5.0, 5.0, 5.0],
+    "Daco": [4.5, 4.2, 5.0],
+    "Nevil": [2.5, 3.0, 3.2]
+    }
+
+#promedio_por_estudiante(notas)
+promedio_ponderado(notas)
+
+
+
+
+
+
+
+
+
+
+
+
 # def buscar_perfectos(limite):
 #     print(f"Buscando números perfectos hasta el {limite}...")
 #     for num in range(2, limite + 1):
@@ -13,31 +58,3 @@
 # # El programa correrá solo hasta el número que tú decidas
 # buscar_perfectos(10000)
 
-def comprobar_numero_perfecto(n):
-    divisores = []
-    # 1. Sacar los divisores del número
-    for i in range(1, n + 1):
-        if n % i == 0:
-            divisores.append(i)
-    
-    # 2. Resultado de la suma de todos los divisores por aparte
-    suma_total = sum(divisores)
-    
-    # 3. Resultado de los divisores menos el mismo número (divisores propios)
-    suma_propios = suma_total - n
-    
-    # Mostrar resultados
-    print(f"Número evaluado: {n}")
-    print(f"1. Lista de todos los divisores: {divisores}")
-    print(f"2. Suma de todos los divisores: {suma_total}")
-    print(f"3. Suma de divisores menos el {n}: {suma_propios}")
-    
-    # Comprobación final
-    if suma_propios == n:
-        print(f"\n¡Resultado! {n} ES un número perfecto.")
-    else:
-        print(f"\nResultado: {n} NO es un número perfecto.")
-
-# Prueba el código con el número que quieras
-numero_usuario = int(input("Introduce un número para comprobar: "))
-comprobar_numero_perfecto(numero_usuario)
