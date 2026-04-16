@@ -20,17 +20,33 @@ def promedio_ponderado(diccionario):
         totalnota = nota1 + nota2 + nota3
         print(f"El promedio ponderado del estudiante '{nombre}' es: {totalnota} / 5,0")
 
+def mayor_promedio(diccionario):
+    nota_mayor = 0.0
+    mejor_estudiante = ""
+    for nombre in diccionario:
+        notas = diccionario[nombre]
+        nota1 = notas[0]*0.30
+        nota2 = notas[1]*0.30
+        nota3 = notas[2]*0.40
+        totalnota = nota1 + nota2 + nota3
+        if totalnota > nota_mayor:
+            nota_mayor = totalnota
+            mejor_estudiante = nombre
+    print(f"El estudiante {nombre} fué quién obtuvo la mayor nota fina, obteniendo {nota_mayor} / 5.0")
 
+def estudiantes_qpasan(diccionario):
+    
 notas = {
     "Harry": [3.8, 4.0, 4.2],
     "Ron": [3.2, 3.8, 2.8],
-    "Hemione": [5.0, 5.0, 5.0],
+    "Hermione": [5.0, 5.0, 5.0],
     "Daco": [4.5, 4.2, 5.0],
     "Nevil": [2.5, 3.0, 3.2]
     }
 
 #promedio_por_estudiante(notas)
-promedio_ponderado(notas)
+#promedio_ponderado(notas)
+#mayor_promedio(notas)
 
 
 
