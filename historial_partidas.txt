@@ -1,0 +1,4 @@
+GANÓ: Adivinó el 61 usando 8 intentos.
+PERDIÓ: No adivinó el 17 en 10 intentos.
+PERDIÓ: No adivinó el 65 en 7 intentos.
+GANÓ: Adivinó el 97 usando 1 intentos.
