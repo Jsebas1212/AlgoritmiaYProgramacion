@@ -1,4 +1,13 @@
 def promedio(lista):
+    """
+    Calcula el promedio matemático de los valores en una lista
+    
+    Parámetros:
+    lista (list): Una lista de números
+    
+    Retorna:
+    float o int: El valor promedio de los números. Retorna 0 si la lista está vacía
+    """
     if lista == []:
         return 0
     else:
@@ -6,6 +15,17 @@ def promedio(lista):
         return float(sumlista) / len(lista)
 
 def encontrar_max(lista):
+    """
+    Esta función encuentra y devuelve el número de mayor
+    valor dentro de una lista
+
+    Parámetros:
+    lista (list): Una lista que contiene números (enteros o reales)
+
+    Retorna:
+    int o float: El número más grande encontrado en la lista.
+    list: Una lista vacía [] si la lista ingresada original estaba vacía
+    """
     if lista == []:
         return []
     else:
@@ -16,6 +36,17 @@ def encontrar_max(lista):
         return numero_grande
     
 def encontrar_min(lista):
+    """
+    Esta función encuentra y devuelve el número de menor
+    valor dentro de una lista
+
+    Parámetros:
+    lista (list): Una lista que contiene números (enteros o reales)
+
+    Retorna:
+    int o float: El número más pequeño encontrado en la lista
+    list: Una lista vacía [] si la lista ingresada original estaba vacía
+    """
     if lista == []:
         return []
     else:
@@ -26,6 +57,16 @@ def encontrar_min(lista):
         return numero_pequeño
     
 def dias_sobre_promedio(lista):
+    """
+    Cuenta cuántos elementos de la lista superan el valor promedio general
+    Utiliza la función promedio() para obtener el valor de referencia
+    
+    Parámetros:
+    lista (list): Una lista de números
+    
+    Retorna:
+    int: La cantidad de veces que un número de la lista fue estrictamente mayor al promedio
+    """
     promlist = promedio(lista)
     count = 0
     for i in lista:
