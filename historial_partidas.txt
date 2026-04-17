@@ -2,3 +2,13 @@ GANÓ: Adivinó el 61 usando 8 intentos.
 PERDIÓ: No adivinó el 17 en 10 intentos.
 PERDIÓ: No adivinó el 65 en 7 intentos.
 GANÓ: Adivinó el 97 usando 1 intentos.
+GANÓ: Adivinó el 5 usando 6 intentos.
+GANÓ: Adivinó el 5 usando 4 intentos.
+PERDIÓ: No adivinó el 53 en 5 intentos.
+GANÓ: Adivinó el 85 usando 4 intentos.
+GANÓ: Adivinó el 85 usando 1 intentos.
+PERDIÓ: No adivinó el 77 en 10 intentos.
+GANÓ: Adivinó el 77 usando 1 intentos.
+GANÓ: Adivinó el 77 usando 1 intentos.
+GANÓ: Adivinó el 89 usando 10 intentos.
+PERDIÓ: No adivinó el 4 en 5 intentos.

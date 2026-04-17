@@ -1,8 +1,13 @@
+import random
+
 def generar_numero(minimo, maximo):
-    numero_base = id(object())
-    rango = maximo - minimo + 1
-    numero_final = (numero_base % rango) + minimo
-    return numero_final
+    return random.randint(minimo, maximo)
+
+# def generar_numero(minimo, maximo):
+#     numero_base = id(object())
+#     rango = maximo - minimo + 1
+#     numero_final = (numero_base % rango) + minimo
+#     return numero_final
 
 def elegir_dificultad():
     while True:
