@@ -1,16 +1,58 @@
 def suma(a, b):
+    """
+    Calcula la suma de dos números.
+    
+    Parámetros:
+    a (float o int): El primer número
+    b (float o int): El segundo número a sumar
+    
+    Retorna:
+    float o int: El resultado de la adición
+    """
     adición = a + b
     return adición
 
 def resta(a, b):
+    """
+    Calcula la diferencia (resta) entre dos números.
+    
+    Parámetros:
+    a (float o int): El número base (minuendo)
+    b (float o int): El número a restar (sustraendo)
+    
+    Retorna:
+    float o int: El resultado de la sustracción
+    """
     sustración = a - b
     return sustración
 
 def producto(a, b):
+    """
+    Calcula la multiplicación de dos números.
+    
+    Parámetros:
+    a (float o int): El primer factor
+    b (float o int): El segundo factor
+    
+    Retorna:
+    float o int: El producto de la multiplicación
+    """
     multiplicación = a * b
     return multiplicación
 
 def división(a, b):
+    """
+    Calcula la división exacta entre dos números
+    y maneja el error de división por cero.
+    
+    Parámetros:
+    a (float o int): El dividendo (número a dividir)
+    b (float o int): El divisor
+    
+    Retorna:
+    float: El resultado de la división
+    str: Un mensaje de advertencia si se intenta dividir entre cero
+    """
     try:
         division = a / b
         return division
@@ -18,6 +60,18 @@ def división(a, b):
         return "⚠️  La división entre cero no está definida⚠️"
 
 def raiz_cuadrada(a):
+    """
+    Calcula la raíz cuadrada de un número
+    Para cumplir con los requisitos, utiliza la función
+    producto() internamente.
+    
+    Parámetros:
+    a (float o int): El número del cual se extraerá la raíz
+    
+    Retorna:
+    float: La raíz cuadrada del número
+    str: Un mensaje de advertencia si el número es negativo
+    """
     if a < 0:
         return "⚠️  ERROR, Las raíces negativas no están definidas en el conjunto de los reales⚠️"
     else:
@@ -25,6 +79,21 @@ def raiz_cuadrada(a):
         return raiz
 
 def exponente(a, b):
+    """
+    Calcula la potencia de un número elevado a otro.
+    Para cumplir con los requisitos, utiliza la función
+    producto() internamente.
+    Maneja excepciones matemáticas como raíces negativas
+    o divisiones por cero implícitas.
+    
+    Parámetros:
+    a (float o int): La base
+    b (float o int): El exponente
+    
+    Retorna:
+    float o int: El resultado de elevar la base al exponente
+    str: Un mensaje de advertencia si la operación matemática no está definida
+    """
     if a < 0 and 0 < b < 1:
         return "⚠️  Las raíces de un número negativo no están definida en el conjunto de los reales⚠️"
     elif a == 0 and b < 0:
@@ -34,6 +103,18 @@ def exponente(a, b):
         return exponente
 
 def factorial(a):
+    """
+    Calcula el factorial de un número utilizando recursividad.
+    Asegura que el cálculo solo se realice en números enteros
+    positivos o cero.
+    
+    Parámetros:
+    a (int o float): El número del cual se calculará el factorial
+    
+    Retorna:
+    int: El factorial del número
+    str: Un mensaje de advertencia si el número es decimal o negativo
+    """
     if a % 1 != 0:
         return "⚠️  El factorial solo está definido para números enteros⚠️"
     elif a == 0: 
@@ -44,6 +125,17 @@ def factorial(a):
         return a*factorial(a-1)
 
 def inversa(a):
+    """
+    Calcula el inverso multiplicativo de un número (1/a).
+    Maneja el error matemático cuando el número es cero.
+    
+    Parámetros:
+    a (float o int): El número al cual se le calculará la inversa
+    
+    Retorna:
+    float: El resultado de 1 dividido por el número
+    str: Un mensaje de advertencia si se intenta calcular la inversa de cero
+    """
     if a == 0:
         return "⚠️  La división entre cero no está definida⚠️"
     else:
