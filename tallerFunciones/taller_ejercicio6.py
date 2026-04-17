@@ -1,8 +1,31 @@
 def mostrar_productos(diccionario):
+    """
+    Recorre el diccionario de productos y los muestra en la consola 
+    de forma ordenada, indicando el nombre y su respectivo precio.
+    
+    Parámetros:
+    diccionario (dict): Un diccionario que contiene los productos disponibles 
+                        como llaves y sus precios como valores.
+    
+    Retorna:
+    Ninguno. Imprime la lista de productos formateada en pantalla
+    """
     for nombre, precio in diccionario.items():
         print(f"|{nombre}| : Precio del producto ${precio}")
 
 def verificar_dinero(precio, saldo_total):
+    """
+    Evalúa si el dinero ingresado por el usuario es suficiente para pagar el producto.
+    Si el dinero no alcanza, calcula la diferencia y le informa al usuario cuánto falta.
+    
+    Parámetros:
+    precio (float o int): El costo total del producto a comprar
+    saldo_total (float o int): La cantidad de dinero que el usuario ha ingresado
+    
+    Retorna:
+    bool: True si el saldo es igual o mayor al precio (la compra se puede realizar)
+          False si el saldo es menor al precio (falta dinero)
+    """
     if saldo_total < precio:
         faltante = precio - saldo_total
         print(f"\nEl dinero no es suficiente. Te faltan ${faltante}\n")

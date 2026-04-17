@@ -1,10 +1,33 @@
 def generar_numero(minimo, maximo):
+    """
+    Genera un número pseudoaleatorio dentro de un rango específico.
+    Utiliza la ubicación en memoria de un objeto nuevo (id(object())) 
+    como base matemática para generar el número, evitando usar librerías externas.
+    
+    Parámetros:
+    minimo (int): El límite inferior del rango numérico
+    maximo (int): El límite superior del rango numérico
+    
+    Retorna:
+    int: Un número entero aleatorio comprendido entre el mínimo y el máximo
+    """
     numero_base = id(object())
     rango = maximo - minimo + 1
     numero_final = (numero_base % rango) + minimo
     return numero_final
 
 def elegir_dificultad():
+    """
+    Despliega un menú interactivo para que el usuario seleccione la dificultad.
+    Valida las diferentes formas en las que el usuario puede escribir su opción.
+    
+    Parámetros:
+    Ninguno
+    
+    Retorna:
+    int: La cantidad de intentos permitidos según la dificultad elegida 
+         (10 para Fácil, 7 para Media, 5 para Difícil)
+    """
     while True:
         print("""
 Escoje el nivel de dificultad
@@ -23,6 +46,17 @@ Escoje el nivel de dificultad
             print("\nOpción no válida, vuelva a intentar")
 
 def jugar(intentos):
+    """
+    Controla el ciclo principal del juego de adivinar el número.
+    Maneja los intentos, proporciona pistas si el número es mayor o menor,
+    valida errores de texto y guarda el historial de la partida en un archivo de texto.
+    
+    Parámetros:
+    intentos (int): La cantidad de intentos disponibles para adivinar el número
+    
+    Retorna:
+    Ninguno. Imprime toda la interacción en consola y escribe en historial_partidas.txt.
+    """
     numero_secreto = generar_numero(1, 100)
     intentos_restantes = intentos
     victoria = False
@@ -66,3 +100,4 @@ def jugar(intentos):
 
 intentos_seleccionados = elegir_dificultad()
 jugar(intentos_seleccionados) 
+
