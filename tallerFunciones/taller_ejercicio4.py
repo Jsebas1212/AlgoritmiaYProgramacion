@@ -1,4 +1,13 @@
 def promedio(lista):
+    """
+    Calcula el promedio matemático de los valores en una lista
+    
+    Parámetros:
+    lista (list): Una lista de números
+    
+    Retorna:
+    float o int: El valor promedio de los números. Retorna 0 si la lista está vacía
+    """
     if lista == []:
         return 0
     else:
@@ -6,12 +15,32 @@ def promedio(lista):
         return float(sumlista) / len(lista)
 
 def promediosim_por_estudiante(diccionario):
+    """
+    Calcula y muestra en pantalla el promedio simple de las notas de cada estudiante.
+    Utiliza la función promedio() como apoyo.
+    
+    Parámetros:
+    diccionario (dict): Diccionario con los nombres de los estudiantes y sus listas de notas
+    
+    Retorna:
+    Ninguno. Imprime los resultados directamente en la consola
+    """
     for nombre in diccionario:
         notas = diccionario[nombre]
         promnotas =promedio(notas)
         print(f"El promedio simple del estudiante '{nombre}' es: {promnotas} / 5,0")
 
 def promedio_ponderado_estudiante(diccionario):
+    """
+    Calcula y muestra el promedio ponderado de cada estudiante basándose en
+    los porcentajes establecidos: 30% para la nota 1, 30% para la nota 2 y 40% para la nota 3.
+    
+    Parámetros:
+    diccionario (dict): Diccionario con los nombres y notas de los estudiantes
+    
+    Retorna:
+    Ninguno. Imprime los promedios ponderados en la consola
+    """
     for nombre in diccionario:
         notas = diccionario[nombre]
         nota1 = notas[0]*0.30
@@ -21,6 +50,16 @@ def promedio_ponderado_estudiante(diccionario):
         print(f"El promedio ponderado del estudiante '{nombre}' es: {totalnota} / 5,0")
 
 def mayor_promedio(diccionario):
+    """
+    Evalúa los promedios ponderados de todos los estudiantes para identificar y mostrar
+    quién obtuvo la calificación final más alta.
+    
+    Parámetros:
+    diccionario (dict): Diccionario con los nombres y notas de los estudiantes
+    
+    Retorna:
+    Ninguno. Imprime en pantalla el nombre del estudiante con mejor rendimiento y su nota
+    """
     nota_mayor = 0.0
     mejor_estudiante = ""
     for nombre in diccionario:
@@ -32,6 +71,16 @@ def mayor_promedio(diccionario):
     print(f"El estudiante '{mejor_estudiante}' fué quién obtuvo la mayor nota final, obteniendo {nota_mayor} / 5.0")
 
 def estudiantes_qpasan(diccionario):
+    """
+    Identifica qué estudiantes aprobaron la materia (promedio ponderado >= 3.0)
+    e imprime un mensaje personalizado (Bonus: Profesora McGonagall).
+    
+    Parámetros:
+    diccionario (dict): Diccionario con los nombres y notas de los estudiantes
+    
+    Retorna:
+    Ninguno. Imprime los nombres de los estudiantes aprobados
+    """
     for nombre in diccionario:
         notas = diccionario[nombre]
         nota_total = (notas[0] * 0.30) + (notas[1] * 0.30) + (notas[2] * 0.40)
@@ -39,6 +88,16 @@ def estudiantes_qpasan(diccionario):
             print(f"¡'{nombre}' APROBÓ la clase de la profesora Mcgonagall con nota de {nota_total} / 5.0 !")
 
 def estudiantes_qnopasan(diccionario):
+    """
+    Identifica qué estudiantes reprobaron la materia (promedio ponderado < 3.0)
+    e imprime un mensaje personalizado (Bonus: Profesora McGonagall).
+    
+    Parámetros:
+    diccionario (dict): Diccionario con los nombres y notas de los estudiantes
+    
+    Retorna:
+    Ninguno. Imprime los nombres de los estudiantes reprobados
+    """
     for nombre in diccionario:
         notas = diccionario[nombre]
         nota_total = (notas[0] * 0.30) + (notas[1] * 0.30) + (notas[2] * 0.40)
