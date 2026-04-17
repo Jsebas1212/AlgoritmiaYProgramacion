@@ -10,7 +10,7 @@ def mostrar_productos(diccionario):
     Retorna:
     Ninguno. Imprime la lista de productos formateada en pantalla
     """
-    for nombre, precio in diccionario.items():
+    for nombre, precio in diccionario.items(): #.items() lo que hace es como decirle a python que saque las llaves (nombre) y los valores (precio) juntos y que los guarde en cada una de las variables que se definen en for.
         print(f"|{nombre}| : Precio del producto ${precio}")
 
 def verificar_dinero(precio, saldo_total):
@@ -48,7 +48,7 @@ while True:
     print("\nSeleccione el producto que desee:")
     mostrar_productos(productos)
     
-    producto_elegido = input("\n¿Qué producto elige? ").capitalize()
+    producto_elegido = input("\n¿Qué producto elige? ").capitalize() #.capitalice() sirve como para mantener un estandar en la forma en la que python recibe el texto ingresado. Sin importar que el usurio escriba "monster","MONSTER" o "MoNsTer" el .capitalice siempre lo va a tranformar en "Monster", es decir, la primera letra mayuscula y la segunda minuscula, siempre así.
 
     if producto_elegido in productos:
         precio_producto = productos[producto_elegido]
@@ -77,7 +77,7 @@ while True:
                     print(f"\n¡Compra exitosa! Entregando {producto_elegido}...")
                     print(f"\nTu devuelta es: ${devuelta} \nPor favor retírela")
                     print("\nQue tenga un buen día usuario")
-                    input("\n\nVolviendo al menú de opciones")
+                    input("\n\nPresiona 'enter' para volver al menú de opciones")
 
 
                 else:
@@ -85,6 +85,7 @@ while True:
                     print("\nPagaste exacto, no hay devuelta.\n")
                     print("\nQue tenga un buen día usuario")
                     input("\n\nPresiona 'enter' para volver al menú de opciones")
+                    
     elif producto_elegido in ["Apagar","Salir","S","A"]:
         print("\nApagando máquina dispensadora...")
         break
