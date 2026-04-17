@@ -37,7 +37,11 @@ while True:
         while saldo < precio_producto:
             try:
                 pago_usuario = float(input("\nIngrese la cantidad de dinero con la que va a pagar: $"))
-                saldo = pago_usuario + saldo
+                if pago_usuario >= 0:
+                    saldo = pago_usuario + saldo
+                else:
+                    print("\nNo se aceptan valores negativos, ingrese solo valores positivos.")
+                    continue
             except ValueError:
                 print("\nPor favor ingrese el valor numérico de la cantidad de dinero con la que va a pagar.")
                 continue
