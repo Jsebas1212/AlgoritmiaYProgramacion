@@ -1,6 +1,7 @@
 def agregar_producto(diccionario, nombre, cantidad, precio):
     """
-    Agrega un nuevo producto al inventario o actualiza uno existente.
+    Agrega un nuevo producto al inventario o actualiza uno existente
+    tomando en cuenta que las cantidades y el precio no puede ser negativo.
     
     Parámetros:
     diccionario (dict): El diccionario que almacena el inventario
@@ -11,9 +12,13 @@ def agregar_producto(diccionario, nombre, cantidad, precio):
     Retorna:
     Ninguno. Modifica el diccionario original y muestra un mensaje de confirmación
     """
-    diccionario[nombre] = {"cantidad" : cantidad,
-                           "precio" : precio}
-    print(f"Se ha agregado '{nombre}' al inventario ✅")
+    if cantidad < 0 or precio < 0:
+        print("\nError, la cantidad y el precio no pueden ser negativos")
+        print(f"\nEl producto '{nombre}' no fué agregado correctamente.")
+    else:
+        diccionario[nombre] = {"cantidad" : cantidad,
+                            "precio" : precio}
+        print(f"Se ha agregado '{nombre}' al inventario ✅")
 
 def eliminar_producto(diccionario, nombre):
     """
@@ -28,9 +33,9 @@ def eliminar_producto(diccionario, nombre):
     """
     if nombre in diccionario:
         del diccionario[nombre]
-        print(f"El producto '{nombre}' ha sido eliminado 🗑️")
+        print(f"\nEl producto '{nombre}' ha sido eliminado 🗑️")
     else:
-        print(f"⚠️  Error: El producto '{nombre}' no se encuentra en el inventario.")
+        print(f"\n⚠️  Error: El producto '{nombre}' no se encuentra en el inventario.")
 
 def calcular_valor_total(diccionario):
     """
@@ -116,7 +121,6 @@ while True:
     elif actionsinv.lower() in ["eliminar","e"]:
         print("\nIngrese el nombre del producto que quiere eliminar del inventario")
         elimpro = input("").capitalize()
-        print("")
         eliminar_producto(inventario, elimpro)
 
     elif actionsinv.lower() in ["calcular","c"]:
