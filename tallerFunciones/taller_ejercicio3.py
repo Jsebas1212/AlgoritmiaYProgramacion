@@ -1,9 +1,31 @@
 def agregar_producto(diccionario, nombre, cantidad, precio):
+    """
+    Agrega un nuevo producto al inventario o actualiza uno existente.
+    
+    Parámetros:
+    diccionario (dict): El diccionario que almacena el inventario
+    nombre (str): El nombre del producto
+    cantidad (int): La cantidad de unidades disponibles
+    precio (float o int): El valor monetario por unidad del producto
+    
+    Retorna:
+    Ninguno. Modifica el diccionario original y muestra un mensaje de confirmación
+    """
     diccionario[nombre] = {"cantidad" : cantidad,
                            "precio" : precio}
     print(f"Se ha agregado '{nombre}' al inventario ✅")
 
 def eliminar_producto(diccionario, nombre):
+    """
+    Elimina un producto específico del inventario, verificando primero si existe.
+    
+    Parámetros:
+    diccionario (dict): El diccionario que almacena el inventario
+    nombre (str): El nombre del producto a eliminar
+    
+    Retorna:
+    Ninguno. Modifica el diccionario original y muestra un mensaje de éxito o de advertencia
+    """
     if nombre in diccionario:
         del diccionario[nombre]
         print(f"El producto '{nombre}' ha sido eliminado 🗑️")
@@ -11,6 +33,16 @@ def eliminar_producto(diccionario, nombre):
         print(f"⚠️  Error: El producto '{nombre}' no se encuentra en el inventario.")
 
 def calcular_valor_total(diccionario):
+    """
+    Calcula el valor monetario total del inventario. 
+    Multiplica la cantidad de cada producto por su precio y suma todos los resultados.
+    
+    Parámetros:
+    diccionario (dict): El diccionario que almacena el inventario
+    
+    Retorna:
+    float o int: El valor total acumulado de todos los productos
+    """
     total = 0
     for nombre in diccionario:
         cantidad = diccionario[nombre]["cantidad"]
@@ -19,6 +51,16 @@ def calcular_valor_total(diccionario):
     return total
 
 def mostrar_inventario(diccionario):
+    """
+    Recorre el inventario actual y muestra en pantalla cada producto 
+    con su respectiva cantidad y precio por unidad de forma ordenada.
+    
+    Parámetros:
+    diccionario (dict): El diccionario que almacena el inventario
+    
+    Retorna:
+    Ninguno. Imprime la información clara y ordenada en la consola.
+    """
     print("---Inventario actual---")
     for nombre in diccionario:
         cantidad = diccionario[nombre]["cantidad"]
