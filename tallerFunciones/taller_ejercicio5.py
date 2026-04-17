@@ -13,7 +13,7 @@ def generar_numero(minimo, maximo):
     """
     numero_base = id(object())
     rango = maximo - minimo + 1
-    numero_final = (numero_base % rango) + minimo
+    numero_final = (numero_base % rango) + minimo #El procentaje hace la división pero no arroja el resultado sino solamente el residuo
     return numero_final
 
 def elegir_dificultad():
