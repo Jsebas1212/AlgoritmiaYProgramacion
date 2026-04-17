@@ -33,44 +33,36 @@ def jugar(intentos):
         print(f"\n--- Intentos restantes: {intentos_restantes} ---")
         
         try:
-            intento_usuario = int(input("¿Cuál crees que es el número?: "))
+            intento_usuario = int(input("¿Puedes adivinar qué número es?: "))
         except ValueError:
             print("Por favor, introduce solo números.")
             continue
 
         if intento_usuario == numero_secreto:
-            print(f"\n¡INCREÍBLE! Adivinaste el número correctamente,{numero_secreto}.")
-            print(f"El número efectivamente era {numero_secreto}.")
+            print(f"\n¡INCREÍBLE! Adivinaste el número correctamente.")
+            print(f"El número efectivamente era '{numero_secreto}.'")
             print("¡FELICIDADES! ¡USTED GANÓ!")
             victoria = True
-            resultado_log = f"GANÓ: Adivinó el {numero_secreto} usando {intentos - intentos_restantes + 1} intentos."
+            resultado_log = f"GANÓ: El jugador adivinó el {numero_secreto} usando {intentos - intentos_restantes + 1} intentos."
             break
         elif intento_usuario < numero_secreto:
             print("\nNúmero incorrecto, intenta de nuevo")
-            print("\nPista: El número secreto es |MAYOR|.")
+            print("\nPista: El número secreto es |MAYOR| ⬆️.")
         else:
             print("\nNúmero incorrecto, intenta de nuevo")
-            print("\nPista: El número secreto es |MENOR|.")
+            print("\nPista: El número secreto es |MENOR| ⬇️.")
         
         intentos_restantes = intentos_restantes - 1
 
     if not victoria:
         print(f"\nSe agotaron los intentos. El número secreto era {numero_secreto}.")
-        resultado_log = f"PERDIÓ: No adivinó el {numero_secreto} en {intentos} intentos."
+        print("\nBuen intento jugador, suerte para la proxima ✌️")
+        resultado_log = f"PERDIÓ: El jugador no adivinó el {numero_secreto} en {intentos} intentos."
 
     with open("historial_partidas.txt", "a", encoding="utf-8") as archivo:
         archivo.write(resultado_log + "\n")
     
     print("\n-> Partida guardada en el historial 'historial_partidas.txt'.")
 
-# --- BLOQUE DE EJECUCIÓN ---
-while True:
-    intentos_seleccionados = elegir_dificultad()
-    jugar(intentos_seleccionados) 
-    print("\n¿Desea volver a jugar? (S/N)")
-    volver = input("") #No tomar en cuenta hasta no entender como funciona comoletamente
-    if volver.lower() in ["s","si"]:
-        print("\nCargando nueva partida...")
-    elif volver.lower() in ["n","no"]:
-        print("\nNos vemos la proxima vez, adios...")
-        break
+intentos_seleccionados = elegir_dificultad()
+jugar(intentos_seleccionados) 
