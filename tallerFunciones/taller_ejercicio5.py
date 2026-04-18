@@ -81,10 +81,10 @@ def jugar(intentos):
             break
         elif intento_usuario < numero_secreto:
             print("\nNúmero incorrecto, intenta de nuevo")
-            print("\nPista: El número secreto es |MAYOR| ⬆️.")
+            print(f"\nPista: El número secreto es |MAYOR| que {intento_usuario} ⬆️.")
         else:
             print("\nNúmero incorrecto, intenta de nuevo")
-            print("\nPista: El número secreto es |MENOR| ⬇️.")
+            print(f"\nPista: El número secreto es |MENOR| que {intento_usuario} ⬇️.")
         
         intentos_restantes = intentos_restantes - 1
 
