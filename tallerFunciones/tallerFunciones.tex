@@ -1,0 +1,39 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage[spanish]{babel}
+
+\title{Taller Funciones - Preguntas Teóricas}
+\author{Johan Sebastian Echeverry Vega}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Ejercicio 1}
+
+\begin{enumerate}
+    
+    \item \textbf{Explique brevemente qué es la programación orientada a objetos o POO y para qué se usa} \\
+    La programación orientada a objetos o POO es un paradigma o modelo de diseño de software que organiza el código en torno a ``objetos'' (datos y comportamientos) en lugar de funciones y lógica. Basado en clases y objetos, este enfoque facilita la creación de programas organizados, reutilizables y fáciles de mantener, simulando elementos del mundo real.
+
+    \item \textbf{¿Cuáles son los cuatro pilares de la POO?} \\
+    Los cuatro pilares fundamentales son:
+    \begin{itemize}
+        \item \textbf{Abstracción:} Consiste en reducir la complejidad, ocultando los detalles internos y mostrando solo las características esenciales. Se enfoca en qué hace un objeto en lugar de cómo lo hace.
+        \item \textbf{Encapsulamiento:} Organiza el código al agrupar datos (atributos) y métodos en una clase, restringiendo el acceso directo a ellos desde fuera. Se utilizan modificadores de acceso (público, privado, protegido) para proteger la integridad de los datos.
+        \item \textbf{Herencia:} Permite que una clase nueva (hija) adquiera atributos y métodos de una clase existente (padre). Esto facilita la reutilización de código y la creación de jerarquías.
+        \item \textbf{Polimorfismo:} Capacidad de que objetos de diferentes clases respondan a un mismo mensaje o método de formas distintas. Permite que una clase hija sobrescriba (redefina) el comportamiento de un método heredado.
+    \end{itemize}
+
+    \item \textbf{¿Qué es una \textit{clase} en POO y en qué se diferencia de una función?} \\
+    En la Programación Orientada a Objetos (POO), una clase es una plantilla, modelo o ``plano'' (blueprint) utilizado para crear objetos. Define un conjunto de atributos (datos) y métodos (comportamientos) que caracterizan a los objetos instanciados a partir de ella. Una función, por otro lado, es un bloque de código reutilizable diseñado para realizar una tarea específica.\\
+    La diferencia clave es que la clase mantiene un ``estado'' a través de sus atributos (recuerda información), mientras que una función es una operación aislada que no guarda datos después de ejecutarse.
+
+    \item \textbf{¿Qué es el constructor o inicializador de una \textit{clase} y qué debe definirse dentro de este?} \\
+    Un constructor o inicializador es un método especial de una clase que se ejecuta automáticamente al crear una nueva instancia (objeto) de dicha clase. Su propósito es establecer valores iniciales para los atributos, asignar memoria y preparar el objeto para su uso, garantizando un estado válido desde el inicio. \\
+    En lenguajes como Python, el constructor se define con el método especial \texttt{\_\_init\_\_}, y dentro de este se suelen pasar los parámetros que el objeto necesita para existir desde el primer segundo.
+
+\end{enumerate}
+
+\end{document}
