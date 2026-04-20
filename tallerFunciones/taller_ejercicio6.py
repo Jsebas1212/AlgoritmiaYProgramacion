@@ -33,7 +33,6 @@ def verificar_dinero(precio, saldo_total):
     else:
         return True 
     
-
 productos = {
     "Doritos": 4000,
     "Monster": 7000,
