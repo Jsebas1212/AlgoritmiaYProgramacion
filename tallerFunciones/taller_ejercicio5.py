@@ -31,9 +31,9 @@ def elegir_dificultad():
     while True:
         print("""
 Escoje el nivel de dificultad
-1. Fácil   (10 intentos)
-2. Media   (7 intentos)
-3. Difícil (5 intentos)
+\33[1;32m1. Fácil   (10 intentos)\033[0m
+\33[1;33m2. Media   (7 intentos)\033[0m
+\33[1;31m3. Difícil (5 intentos)\033[0m
               """)
         opcDificultad = input("")
         if opcDificultad.lower() in ["1","fácil","facil","10"]:
@@ -61,10 +61,10 @@ def jugar(intentos):
     intentos_restantes = intentos
     victoria = False
     
-    print("\n¡Que comience el juego! He pensado un número entre 1 y 100.")
+    print("\n\033[33m¡Que comience el juego! He pensado un número entre 1 y 100.\033[0m")
     
     while intentos_restantes > 0:
-        print(f"\n--- Intentos restantes: {intentos_restantes} ---")
+        print(f"\n\033[94m--- Intentos restantes: {intentos_restantes} ---\033[0m")
         
         try:
             intento_usuario = int(input("¿Puedes adivinar qué número es?: "))
