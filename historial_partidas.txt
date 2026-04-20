@@ -2,3 +2,24 @@ PERDIÓ: El jugador no adivinó el 89 en 5 intentos.
 GANÓ: El jugador adivinó el 41 usando 7 intentos.
 GANÓ: El jugador adivinó el 49 usando 1 intentos.
 GANÓ: El jugador adivinó el 13 usando 1 intentos.
+PERDIÓ: El jugador no adivinó el 41 en 10 intentos.
+PERDIÓ: El jugador no adivinó el 45 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 61 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 5 en 5 intentos.
+GANÓ: El jugador adivinó el 5 usando 3 intentos.
+GANÓ: El jugador adivinó el 73 usando 8 intentos.
+PERDIÓ: El jugador no adivinó el 41 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 29 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 5 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 21 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 89 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 93 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 53 en 5 intentos.
+GANÓ: El jugador adivinó el 77
+GANÓ: El jugador adivinó el 45
+PERDIÓ: El jugador no adivinó el 1 en 5 intentos.
+PERDIÓ: El jugador no adivinó el 45 en 5 intentos.
+GANÓ: El jugador adivinó el 5
+GANÓ: El jugador adivinó el 5
+GANÓ: El jugador adivinó el 13
+GANÓ: El jugador adivinó el 33

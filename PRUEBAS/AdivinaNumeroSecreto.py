@@ -3,19 +3,13 @@ import random
 def generar_numero(minimo, maximo):
     return random.randint(minimo, maximo)
 
-# def generar_numero(minimo, maximo):
-#     numero_base = id(object())
-#     rango = maximo - minimo + 1
-#     numero_final = (numero_base % rango) + minimo
-#     return numero_final
-
 def elegir_dificultad():
     while True:
         print("""
 Escoje el nivel de dificultad
-1. Fácil   (10 intentos)
-2. Media   (7 intentos)
-3. Difícil (5 intentos)
+\33[1;32m1. Fácil   (10 intentos)\033[0m
+\33[1;33m2. Media   (7 intentos)\033[0m
+\33[1;31m3. Difícil (5 intentos)\033[0m
               """)
         opcDificultad = input("")
         if opcDificultad.lower() in ["1","fácil","facil","10"]:
@@ -44,18 +38,18 @@ def jugar(intentos):
             continue
 
         if intento_usuario == numero_secreto:
-            print(f"\n¡INCREÍBLE! Adivinaste el número correctamente,{numero_secreto}.")
-            print(f"El número efectivamente era {numero_secreto}.")
-            print("¡FELICIDADES! ¡USTED GANÓ!")
+            print(f"\n\033[32m¡INCREÍBLE! Adivinaste el número correctamente.\033[0m")
+            print(f"\n\033[93mEl número efectivamente era '{numero_secreto}'\033[0m")
+            print("\n\033[32m¡FELICIDADES! ¡USTED GANÓ!\033[0m")
             victoria = True
             resultado_log = f"GANÓ: Adivinó el {numero_secreto} usando {intentos - intentos_restantes + 1} intentos."
             break
         elif intento_usuario < numero_secreto:
-            print("\nNúmero incorrecto, intenta de nuevo")
-            print("\nPista: El número secreto es |MAYOR|.")
+            print("\n\033[31mNúmero incorrecto, intenta de nuevo\033[0m")
+            print(f"\nPista: El número secreto es |MAYOR| que {intento_usuario} ⬆️.")
         else:
             print("\nNúmero incorrecto, intenta de nuevo")
-            print("\nPista: El número secreto es |MENOR|.")
+            print(f"\nPista: El número secreto es |MENOR| que {intento_usuario} ⬇️.")
         
         intentos_restantes = intentos_restantes - 1
 
@@ -68,12 +62,11 @@ def jugar(intentos):
     
     print("\n-> Partida guardada en el historial 'historial_partidas.txt'.")
 
-# --- BLOQUE DE EJECUCIÓN ---
 while True:
     intentos_seleccionados = elegir_dificultad()
     jugar(intentos_seleccionados) 
     print("\n¿Desea volver a jugar? (S/N)")
-    volver = input("") #No tomar en cuenta hasta no entender como funciona comoletamente
+    volver = input("")
     if volver.lower() in ["s","si"]:
         print("\nCargando nueva partida...")
     elif volver.lower() in ["n","no"]:
