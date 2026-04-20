@@ -73,14 +73,14 @@ def jugar(intentos):
             continue
 
         if intento_usuario == numero_secreto:
-            print(f"\n¡INCREÍBLE! Adivinaste el número correctamente.")
-            print(f"El número efectivamente era '{numero_secreto}.'")
-            print("¡FELICIDADES! ¡USTED GANÓ!")
+            print(f"\n\033[32m¡INCREÍBLE! Adivinaste el número correctamente.\033[0m")
+            print(f"\n\033[93mEl número efectivamente era '{numero_secreto}'\033[0m")
+            print("\n\033[32m¡FELICIDADES! ¡USTED GANÓ!\033[0m")
             victoria = True
             resultado_log = f"GANÓ: El jugador adivinó el {numero_secreto} usando {intentos - intentos_restantes + 1} intentos."
             break
         elif intento_usuario < numero_secreto:
-            print("\nNúmero incorrecto, intenta de nuevo")
+            print("\n\033[31mNúmero incorrecto, intenta de nuevo\033[0m")
             print(f"\nPista: El número secreto es |MAYOR| que {intento_usuario} ⬆️.")
         else:
             print("\nNúmero incorrecto, intenta de nuevo")
@@ -100,4 +100,3 @@ def jugar(intentos):
 
 intentos_seleccionados = elegir_dificultad()
 jugar(intentos_seleccionados) 
-

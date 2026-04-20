@@ -1,0 +1,4 @@
+PERDIÓ: El jugador no adivinó el 89 en 5 intentos.
+GANÓ: El jugador adivinó el 41 usando 7 intentos.
+GANÓ: El jugador adivinó el 49 usando 1 intentos.
+GANÓ: El jugador adivinó el 13 usando 1 intentos.
