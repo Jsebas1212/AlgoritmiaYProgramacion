@@ -58,7 +58,6 @@ def jugar(intentos):
     Ninguno. Imprime toda la interacción en consola y escribe en historial_partidas.txt.
     """
     numero_secreto = generar_numero(1, 100)
-    print(numero_secreto)
     intentos_restantes = intentos
     victoria = False
     

@@ -23,3 +23,5 @@ GANÓ: El jugador adivinó el 5
 GANÓ: El jugador adivinó el 5
 GANÓ: El jugador adivinó el 13
 GANÓ: El jugador adivinó el 33
+PERDIÓ: El jugador no adivinó el 77 en 5 intentos.
+GANÓ: El jugador adivinó el 84
