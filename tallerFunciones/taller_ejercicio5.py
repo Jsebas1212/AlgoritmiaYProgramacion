@@ -107,3 +107,4 @@ intentos_seleccionados = elegir_dificultad()
 jugar(intentos_seleccionados) 
 
 print("Hola mundo")
+print("Hola mundo")
