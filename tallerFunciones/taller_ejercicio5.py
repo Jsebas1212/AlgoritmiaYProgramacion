@@ -100,6 +100,8 @@ def jugar(intentos):
     
     print("\n-> Partida guardada en el historial 'historial_partidas.txt'.")
     input("")
+    input("")
+
 
 intentos_seleccionados = elegir_dificultad()
 jugar(intentos_seleccionados) 
