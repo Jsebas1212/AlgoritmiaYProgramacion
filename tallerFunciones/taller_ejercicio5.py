@@ -105,3 +105,4 @@ def jugar(intentos):
 
 intentos_seleccionados = elegir_dificultad()
 jugar(intentos_seleccionados) 
+
