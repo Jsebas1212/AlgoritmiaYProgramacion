@@ -6,3 +6,5 @@ tkinter.Tk().withdraw()
 
 # Esta es la línea mágica que crea la ventana emergente de información.
 messagebox.showinfo("Aviso de homosexualidad", "Hola, usted es 100% homosexual ¡Felicidades!")
+input("Presione Enter para cerrar la ventana...")
+messagebox.showinfo("Aviso de amor", "Te amo")
