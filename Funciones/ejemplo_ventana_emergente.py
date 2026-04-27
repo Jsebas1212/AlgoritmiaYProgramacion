@@ -5,6 +5,15 @@ from tkinter import messagebox
 tkinter.Tk().withdraw()
 
 # Esta es la línea mágica que crea la ventana emergente de información.
-messagebox.showinfo("Aviso de homosexualidad", "Hola, usted es 100% homosexual ¡Felicidades!")
-input("Presione Enter para cerrar la ventana...")
-messagebox.showinfo("Aviso de amor", "Te amo")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","Cuando dices que te olvide...")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","Es porque me has olvidado")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","Pides que desate un lazo que ya llevas desatado")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","¿Cómo se desbesa un beso?")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","¿Cómo deshago un abrazo?")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","¿Cómo borro una caricia?")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","¿Cómo se olvidan tus brazos?")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","Sabes que me es imposible dividir en dos los pasos")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","Ni repartir el camino")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","Sin separar nuestros labios")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","Ni repartir el camino...")
+messagebox.showinfo("Besos Usados - Andrés Cepeda","Sin separar nuestros labios...")
