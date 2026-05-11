@@ -22,7 +22,7 @@ PALETA_NEON = [
 class WaterSortFuturista:
     def __init__(self, root):
         self.root = root
-        self.root.title("NEON WATER SORT - TECH EDITION")
+        self.root.title("COME MONDÁ")
         self.root.geometry("1200x850")
         self.root.configure(bg="#0a0a12") 
         
