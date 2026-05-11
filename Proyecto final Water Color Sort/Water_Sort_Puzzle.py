@@ -10,13 +10,14 @@ DIFICULTADES = {
     "Difícil": {"colores": 9, "vacios": 3},
     "Extremo": {"colores": 11, "vacios": 3},
     "Pesadilla": {"colores": 13, "vacios": 4},
-    "Imposible": {"colores": 15, "vacios": 12}
+    "Prueba": {"colores": 16, "vacios": 40}
 }
 
 PALETA_NEON = [
     "#FF00FF", "#00FFFF", "#FFD700", "#FF4500", "#7FFF00", 
     "#1E90FF", "#FF1493", "#ADFF2F", "#FF8C00", "#00FA9A",
-    "#8A2BE2", "#F0E68C", "#FF6347", "#E0E0E0", "#4B0082"
+    "#8A2BE2", "#F0E68C", "#FF6347", "#E0E0E0", "#4B0082",
+    "#000000"
 ]
 
 class WaterSortFuturista:
