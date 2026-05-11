@@ -22,12 +22,12 @@ PALETA_NEON = [
 class WaterSortFuturista:
     def __init__(self, root):
         self.root = root
-        self.root.title("COME MONDÁ")
+        self.root.title("NÚCLEO DE ENERGÍA")
         self.root.geometry("1200x850")
         self.root.configure(bg="#0a0a12") 
         
         # --- CONFIGURACIÓN DE GAMEPLAY ---
-        self.max_deshacer = 9999  # <--- MODIFICA ESTO PARA EL BETATESTER (ej. 999)
+        self.max_deshacer = 9999
         self.intentos_deshacer = self.max_deshacer
         
         self.dificultad_actual = "Normal"
@@ -71,7 +71,6 @@ class WaterSortFuturista:
         self.scrollbar.pack(side="right", fill="y")
         self.canvas.pack(side="left", fill="both", expand=True)
 
-        # Enlazar rueda del ratón
         self.canvas.bind_all("<MouseWheel>", self._on_mousewheel)
 
     def _on_mousewheel(self, event):
@@ -85,7 +84,6 @@ class WaterSortFuturista:
         conf = DIFICULTADES[self.dificultad_actual]
         colores_usar = PALETA_NEON[:conf["colores"]]
         
-        # Llenado de botellas
         pool = colores_usar * self.capacidad
         random.shuffle(pool)
         
@@ -93,7 +91,6 @@ class WaterSortFuturista:
         for _ in range(conf["vacios"]):
             self.tubos_data.append([])
             
-        # Reset de estados
         self.historial = []
         self.intentos_deshacer = self.max_deshacer
         self.seleccionado = None
@@ -101,7 +98,6 @@ class WaterSortFuturista:
         self.dibujar_escena()
 
     def registrar_estado(self):
-        """Guarda una copia profunda del estado actual."""
         estado_copia = [list(tubo) for tubo in self.tubos_data]
         self.historial.append(estado_copia)
         if len(self.historial) > 50: self.historial.pop(0)
@@ -134,7 +130,6 @@ class WaterSortFuturista:
         color_borde = "#FF00FF" if seleccionado else "#00FFFF"
         ancho_borde = 3 if seleccionado else 1
 
-        # Líquido
         cuerpo_alto = alto - cuello_h - 10
         for i, color in enumerate(contenido):
             bh = cuerpo_alto / self.capacidad
@@ -148,17 +143,13 @@ class WaterSortFuturista:
     def dibujar_escena(self):
         self.canvas.delete("all")
         
-        # Fondo Rejilla
-        for i in range(0, 1500, 50):
-            self.canvas.create_line(i, 0, i, 2000, fill="#0f0f1a")
-            self.canvas.create_line(0, i, 1500, i, fill="#0f0f1a")
-
         total_tubos = len(self.tubos_data)
         columnas = 8 if total_tubos > 15 else 7
         ancho_b, alto_b = 60, 180
         gap_x, gap_y = 50, 80
         margen_x, margen_y = 100, 50
 
+        # 1. Dibujamos las botellas
         for i, contenido in enumerate(self.tubos_data):
             fila, col = i // columnas, i % columnas
             x = margen_x + col * (ancho_b + gap_x)
@@ -170,9 +161,31 @@ class WaterSortFuturista:
             self.canvas.create_rectangle(x, y, x+ancho_b, y+alto_b, fill="", outline="", tags=tag)
             self.canvas.tag_bind(tag, "<Button-1>", lambda e, idx=i: self.clic_botella(idx))
 
-        # Actualizar área de scroll
+        # 2. Ajuste inteligente del ScrollRegion
         self.canvas.update_idletasks()
-        self.canvas.config(scrollregion=self.canvas.bbox("all"))
+        bbox = self.canvas.bbox("all")
+        
+        # Obtenemos el alto actual de la ventana (mínimo 850 si aún no carga)
+        win_height = self.canvas.winfo_height()
+        if win_height < 100: win_height = 850 
+
+        if bbox:
+            # El límite será el máximo entre el fondo de las botellas (+ margen) o el alto de la ventana
+            limite_y = max(bbox[3] + 100, win_height)
+            # El ancho será el máximo entre el ancho de las botellas o el ancho de la ventana
+            limite_x = max(bbox[2] + 100, self.canvas.winfo_width())
+            
+            self.canvas.config(scrollregion=(0, 0, limite_x, limite_y))
+        else:
+            limite_y = win_height
+
+        # 3. Dibujamos la rejilla de fondo ocupando todo el espacio calculado
+        for i in range(0, 2000, 50): # Un poco más ancho por seguridad
+            self.canvas.create_line(i, 0, i, limite_y, fill="#0f0f1a", tags="fondo")
+        for i in range(0, limite_y + 50, 50):
+            self.canvas.create_line(0, i, 2000, i, fill="#0f0f1a", tags="fondo")
+        
+        self.canvas.tag_lower("fondo")
 
     def clic_botella(self, idx):
         if self.seleccionado is None:
